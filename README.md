@@ -5,7 +5,7 @@ Vous pouvez voter 1 fois tous les 2 heures, les votes sont valable 1h en API
 
 ## INSTALLATION
 
-1. Ajouter le script dans votre dossier ressource
+1. Ajouter le script dans votre dossier resources
 2. Demmarrer le script dans server.cfg
 
 ```
