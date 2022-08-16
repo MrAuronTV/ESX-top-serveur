@@ -22,13 +22,18 @@ AddEventHandler('vote:offline', function(pseudo,id)
 	['@name'] = pseudo
 	})
 	
-	for i=1, #test, 1 do
-	money = test[1].money + 850 -- Ajoute 850$ au porte monnaie
-	-- MISE A JOUR EN BDD
-	MySQL.Sync.execute('UPDATE users SET money = @money WHERE name = @name', {
-	['@money'] = money,
+	local test = MySQL.Sync.fetchAll('SELECT * from users WHERE name = @name', {
 	['@name'] = pseudo
-	})	
+	})
+	for i=1, #test, 1 do
+		if test[1].name ~= nil then
+			money = test[1].money + 850
+			
+			MySQL.Sync.execute('UPDATE users SET money = @money WHERE name = @name', {
+			['@money'] = money,
+			['@name'] = pseudo
+			})	
+		end
 	end
 end)
 
