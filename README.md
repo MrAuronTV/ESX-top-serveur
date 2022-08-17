@@ -19,8 +19,8 @@ Cron : https://github.com/zaphosting/esx/tree/master/cron
 
 ## UTILISATION
 
-Modifier ligne 5 de server.lua la variable TOKEN par votre identifiant de serveur sur le site top-serveur
-Vous pouvez également modifier les recompenses de vote et l'argent donné à l'aide des commentaires
+Modifier ligne 5 de server.lua la variable TOKEN par votre identifiant de serveur sur le site top-serveur         
+Vous pouvez également modifier les recompenses de vote et l'argent donné à l'aide des commentaires          
 
 
 Twitch : https://www.twitch.tv/mraurontv   
