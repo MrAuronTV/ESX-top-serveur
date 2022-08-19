@@ -53,33 +53,21 @@ function vote(d,m,h)
 			end
 		end
 		
-		-- On check si des gens sont connecté ou si le serveur est vide
-		local onlinePlayers = GetNumPlayerIndices()
-		
-		if onlinePlayers ~= 0 then
-			-- Il y a au moins une personne sur le serveur
-			for _, playerId in ipairs(GetPlayers()) do
-				player = playerId
-				name = GetPlayerName(playerId)
-				if name ~= nil or name == 0 then
-					for _, user in ipairs(tbl) do
-						if user == name then
-							-- Give au votant en ligne
-							TriggerEvent('vote:info',name,player)
-						else
-							-- Give au votant hors ligne
-							TriggerEvent('vote:offline',user,player)
-						end
+		for _, playerId in ipairs(GetPlayers()) do
+			player = playerId
+			
+			name = GetPlayerName(playerId)
+			--name = server
+			--user = topserver
+			if name ~= nil or name == 0 then
+				for _, user in ipairs(tbl) do
+					if user == name then
+						print(name.. ' En ligne')
+						TriggerEvent('vote:info',name,player)				
 					end
-				end
+				end		
 			end
-		else
-			-- Il y a personne sur le serveur
-			-- Give au votant hors ligne
-			for _, user in ipairs(tbl) do
-				TriggerEvent('vote:offline',user)
-			end 
-		end
+		end	
 	end)
 end
 
