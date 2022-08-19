@@ -2,6 +2,7 @@
 
 Recuperer automatiquement les votes top-serveurs.net sans l'utilisation du port du plugin de base du site                               
 Vous pouvez voter 1 fois tous les 2 heures, les votes sont valable 1h en API  
+Le script fonctionne avec le playername (pseudo steam)
 
 ## INSTALLATION
 
