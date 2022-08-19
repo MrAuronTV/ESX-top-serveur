@@ -15,28 +15,6 @@ AddEventHandler('vote:info', function(pseudo,id)
 	TriggerClientEvent('esx:showNotification', id, 'Merci pour ton vote!')
 end)
 
-RegisterServerEvent('vote:offline')
-AddEventHandler('vote:offline', function(pseudo,id) 
-	-- Si les votant sont pas connecté au moment du cron vote
-	local test = MySQL.Sync.fetchAll('SELECT * from users WHERE name = @name', {
-	['@name'] = pseudo
-	})
-	
-	local test = MySQL.Sync.fetchAll('SELECT * from users WHERE name = @name', {
-	['@name'] = pseudo
-	})
-	for i=1, #test, 1 do
-		if test[1].name ~= nil then
-			money = test[1].money + 850
-			
-			MySQL.Sync.execute('UPDATE users SET money = @money WHERE name = @name', {
-			['@money'] = money,
-			['@name'] = pseudo
-			})	
-		end
-	end
-end)
-
 function vote(d,m,h)
 	-- On télécharge les votes et extrait depuis l'api top serveur
 	PerformHttpRequest("https://api.top-serveurs.net/v1/votes/last?server_token=".. TOKEN, function (errorCode, resultData, resultHeaders)	
