@@ -24,6 +24,7 @@ Modifier ligne 5 de server.lua la variable TOKEN par votre identifiant de serveu
 Vous pouvez également modifier les recompenses de vote et l'argent donné à l'aide des commentaires          
 
 
-Twitch : https://www.twitch.tv/mraurontv   
-Youtube : https://www.youtube.com/user/mraurontv  
-Discord : https://discord.gg/tjU9ZGa
+Kick : https://www.kick.com/mraurontv     
+Twitch : https://www.twitch.tv/mraurontv    
+Youtube : https://www.youtube.com/user/mraurontv    
+Discord : https://discord.gg/dDUXt2J    
